@@ -1,4 +1,3 @@
-// handler.js
 const jwt = require("jsonwebtoken");
 const User = require("./models/User");
 const SECRET_KEY = "secret_key";
