@@ -7,7 +7,13 @@
     "serverless-http": "^3.2.0"
   },
   "devDependencies": {
+    "axios": "^1.6.2",
     "jest": "^29.7.0",
     "serverless-offline": "^13.3.0"
+  },
+  "scripts": {
+    "pretest": "serverless offline start &",
+    "test": "npx jest --maxWorkers=2",
+    "start": "serverless offline start"
   }
 }
