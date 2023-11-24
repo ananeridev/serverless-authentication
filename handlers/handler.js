@@ -1,9 +1,10 @@
 const jwt = require("jsonwebtoken");
 const User = require("./models/User");
+const db = require("./db/db.json");
 const SECRET_KEY = "secret_key";
 const login = async (event) => {
   const { email, password } = JSON.parse(event.body);
-  const user = await User.findOne({ email, password }); // only for test purpose
+  const user = db.users.find((user) => user.id === id);
   if (!user) {
     return {
       statusCode: 401,
@@ -25,7 +26,7 @@ const authenticate = (handler) => async (event) => {
   try {
     const token = authorization.replace("Bearer ", "");
     const { id } = jwt.verify(token, SECRET_KEY);
-    const user = await User.findById(id);
+    const user = db.users.find((user) => user.id === id);
     if (!user) {
       return {
         statusCode: 401,
