@@ -1,5 +1,4 @@
 const jwt = require("jsonwebtoken");
-const User = require("./models/User");
 const db = require("./db/db.json");
 const SECRET_KEY = "secret_key";
 const login = async (event) => {
