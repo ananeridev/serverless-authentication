@@ -1,6 +1,6 @@
 # serverless-authentication :zap:
 
-## How to Use Serverless and JWT Together
+## How to Use Serverless and JWT on a project
 
 **Serverless and JWT can be used together to build secure and scalable applications.**
 
